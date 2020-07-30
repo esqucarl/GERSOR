@@ -1,0 +1,375 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+	background:#fff;
+	font-size: 16px;
+	
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 75em;
+	margin: 1.25em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'contenido		contenido 	aside'
+		'footer	 		footer 		footer';
+	}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #fff;
+	box-shadow: 0px 0px 70px rgba(59, 86, 241, 0.2);
+}
+
+.header .logo {
+	margin-bottom: 1.25em;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.logo h1 {
+	font-size: 1.875rem;
+	color:  rgb(3, 48, 49);}
+
+.logo .iniciales-logo {
+	padding: 0.3125em;
+	border: 0.125em solid rgb(3, 131, 136);
+	display: inline-block;
+	font-size: 1rem ;
+	margin-bottom: 0.9375em;
+}
+
+
+.menu {
+	border-top: 1px rgb(78, 220, 233);
+	border-bottom: 3px solid rgb(78, 220, 233);
+	display: flex;
+	justify-content: space-between;
+}
+
+
+.menu a {
+	padding: 0.625em;
+	color: rgb(29, 40, 73);
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 1em;
+	
+}
+
+.menu a:hover {
+	background: rgb(3, 102, 105);
+	color: rgb(252, 255, 255);
+}
+
+/* ---------- Articulos ----------*/
+.articulo {
+	display: flex;
+	background: #fff;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.articulo .contenedor-texto {
+	padding: 1.25em;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.articulo .contenedor-thumbnail {
+	width: 50%;
+}
+
+.articulo .titulo {
+	margin-bottom: 0.625rem;
+	font-size: 1.5625rem;
+}
+
+.articulo .titulo a {
+	font-weight: 400;
+	color: #000;
+}
+
+.articulo .fecha {
+	font-size: 1rem;
+	color: #868b8d;
+	margin-bottom: 0.625em;
+}
+
+.articulo .extracto {
+	font-size: 1.25em; 
+	line-height: 1.5625rem; 
+	font-weight: 300;
+	color: #000000;
+	margin-bottom: 90px;
+	}
+
+
+/* ---------- Articulo Destacado ----------*/
+.articulo.destacado {
+	grid-area: destacado;
+	color: white;
+	background-color: rgba(50, 53, 52, 0.774);
+	box-shadow: 0px 0px 70px rgba(24, 243, 207, 0.027);
+
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+}
+
+.articulo.destacado .contenedor-thumbnail {
+	min-height: 100%;
+	width: 100%;
+}
+
+.articulo.destacado .contenedor-thumbnail a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.destacado .titulo a {
+	color: #fff;
+}
+
+.destacado .titulo::after {
+	content: '';
+	margin: 0.625em 0; 
+	display: block;
+	background-color: #066e66e8;
+	width: 15em;
+	height: 1px;
+}
+
+/*MODIFICACIONES DE boton POP-UP*/
+
+.btn-abrir-popup {
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #262626;
+	font-size: 1em; 
+	text-transform: uppercase;
+	letter-spacing: 0.0625em;
+	align-self: flex-end;
+}
+
+.btn-abrir-popup:hover {
+	background: #000;
+	text-decoration: none;
+}
+
+.overlay{
+	background: rgba(11, 93, 93, 0.6);
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+.overlay .active{
+	visibility: visible;
+}
+.popup{
+	padding: 1.25rem; 
+	background: #262626;
+	box-shadow: 0px,0px,5px,0px;
+	font-size: 1em; 
+	border-radius: 3px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 30em;
+			}
+
+.popup .btn-cerrar-popup{
+	font-size: 1rem;
+	line-height: 1rem;
+	display: block;
+	text-align: right;
+	color: seashell;
+	transition: .3s ease all;
+	}
+	.popup .btn-cerrar-popup:hover{
+		color: rebeccapurple;
+	}
+	.popup .fa-whatsapp{
+		color: #00e000;
+		}
+	.popup h3{
+		font-size: 2.25em;
+		font-weight: 600;
+		margin-bottom: 0.625rem;
+	}
+	
+
+	.popup form .contenedor-input input {
+		width: 100%;
+		margin-bottom: 1.25em;
+		height: 3.25em;
+		line-height: 3.25em;
+		font-size: 1.125em;
+		text-align: center;
+		border: 1px solid #ccc;
+	}
+	.popup form .btn-submit{
+		padding: 0 1.25em;
+		height: 2.5em;
+		line-height: 2.5em;
+		border: none;
+		color: #fff;
+		background: #086244;
+		border-radius: 3px;
+		cursor: pointer;
+		transition: .1s ease all;
+	}
+	.popup form .btn-submit:hover {
+		background: #05b44e;
+	}
+
+
+/**--ANIMACIONES DEL POP-UP--**/
+
+
+/*---------- CONTENIDO ----------*/
+.contenido {
+	grid-area: contenido;
+	display: grid;
+	grid-template-columns: 1;
+	grid-gap: 1.25em; 
+}
+
+/*---------- SIDEBAR ----------*/
+.sidebar {
+	padding: 5em 1.5625em; 
+	text-align: center;
+	min-height: 6.25em; 
+	grid-area: aside;
+	background: #000;
+	color: #fafbfb;
+	box-shadow: 0em 0em 4.375em rgba(102, 102, 102, 0.2);
+}
+
+.sidebar .acerca-de img {
+	border-radius: 100%;
+	height: 10em; 
+	width: 10em; 
+	margin-bottom: 1.5625em; 
+}
+
+.sidebar .bio {
+	margin-bottom: 1.5625em; 
+	font-size: 1.25em; 
+	line-height: 1.5625em; 
+}
+
+.sidebar .serv{
+	margin-bottom: 1.5625em; 
+	font-size: 1.25em; 
+	line-height: 1.5625em;
+	text-align: left; 	
+}
+
+/*---------- FOOTER ----------*/
+.contenedor .footer {
+	background: #fff;
+	font-size: 1rem; 
+	grid-area: footer;
+	padding: 1.5625em; 
+	text-align: right;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+/*extra large desktop devices*/
+@media (max-width:1200px){
+	body{
+		font-size: 14px;
+	}
+
+}
+/*laptop devices*/
+@media (max-width:992px){
+	body{
+		font-size: 16px;
+	}
+	.header{
+		font: 12px;
+	}
+
+	.contenedor{
+		grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'contenido		contenido 	contenido'
+		'aside			aside		aside'
+		'footer	 		footer 		footer';
+	}
+	.articulo.destacado {
+		grid-template-columns: 1fr;
+	}
+	.articulo.destacado .contenedor-thumbnail{
+		height:16em;
+	}
+}
+
+/*tablets devices*/
+@media (max-width:768px){
+	body{
+		font-size: 14px;
+	}
+	.header{
+		font: 10px;
+	}
+	.popup form .contenedor-input input {
+		width: 100%;
+		text-align: center;
+		}
+}
+/*phone devices*/
+@media (max-width:576px){
+	body{
+		font-size: 10px;
+	}
+	.header{
+		font: 2px;
+	}
+	.popup form .contenedor-input input {
+		width: 100%;
+		text-align: center;
+		}
+	}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Event Coordinator</title>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+		<link rel="stylesheet" href="./css/estilos.css" />
+	</head>
+	<body>
+			<div class="contenedor">
+			<header class="header">
+				<div class="logo">
+					<p class="iniciales-logo">GERSOR</p>
+					<h1>Destination Event Planner</h1>
+				</div>
+			</header>
+
+			<article class="articulo destacado">
+				<div class="contenedor-texto">
+					<div>
+						<h2 class="titulo"><a href="#">Destination Wedding Planner</a></h2>
+						<p class="fecha">
+							<time>Los Cabos Baja California Sur 2020</time>
+						</p> 
+					</div>
+					<p class="extracto">
+						We provide comprehensive planning of unique events. We ensure that our guests share an incredible experience with family and friends. Contact us here to customize your event.</p>
+						<!--BOTON POP UP DE INFO-->
+						<a href="#" id="btn-abrir-popup" class="btn-abrir-popup" id="btn-abrir-popup"> CONTACT ME</a>
+						<div class="overlay" id="overlay"> 
+						<div class="popup" id="popup">
+							<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i> </a>
+							<h3>Contact me</h3>
+							<h2><i class="fab fa-whatsapp"></i>		+ 52 624 154 7996</h2>
+							<form action="">
+								<div class="contenedor-input">
+									<input type="text" placeholder="Name">
+									<input type="email" placeholder="@ mail">
+								</div>
+								<input type="submit" class="btn-submit" value="SEND">
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="contenedor-thumbnail">
+					<a href="#">
+						<img src="./img/themes.jpg" alt="palmera" />
+					</a>
+				</div>
+			</article>
+
+			<main class="contenido">
+				<article class="articulo">
+					<div class="contenedor-thumbnail">
+						<a href="#"><img src="./img/banquetes.jpg" alt="" /></a>
+					</div>
+					<div class="contenedor-texto">
+						<div>
+							<h2 class="titulo">
+								<a href="#">Banquets and Catering</a>
+							</h2>
+							<p class="fecha">
+								<time>Noviembre, 2019</time>
+							</p>
+						</div>
+						<p class="extracto">
+							No event is too small or too large for us to handle With different areas to host your Event.</p>
+						
+					</div>
+				</article>
+
+				<article class="articulo">
+					<div class="contenedor-thumbnail">
+						<a href="#"><img src="./img/picnic.jpg" alt="" /></a>
+					</div>
+					<div class="contenedor-texto">
+						<div>
+							<h2 class="titulo">
+								<a href="#">Exceptional Food and Service </a>
+							</h2>
+							<p class="fecha">
+								<time>January, 2020</time>
+							</p>
+						</div>
+						<p class="extracto">
+							Our professional Chefs have the ability to deliver a presentation that accomplishes your special requests and stays on budget.
+						</p>
+						
+					</div>
+				</article>
+
+				<article class="articulo">
+					<div class="contenedor-thumbnail">
+						<a href="#"><img src="./img/boda.jpg" alt="" /></a>
+					</div>
+					<div class="contenedor-texto">
+						<div>
+							<h2 class="titulo">
+								<a href="#">Regional Attractions</a>
+							</h2>
+							<p class="fecha">
+								<time>Noviembre, 2019</time>
+							</p>
+						</div>
+						<p class="extracto">
+							We can offer a variety of attractive places to celebrate your event.
+						</p>
+						
+					</div>
+				</article>
+			</main>
+
+			<aside class="sidebar">
+				<div class="acerca-de">
+					<img src="./img/crew.jpg" class="img-perfil" alt="" />
+
+					<div class="bio">
+						<p class="titulo">¡Hola!</p>
+						<p>
+							We are a local Family with more than 10 years in business. Offering diverse of services:
+						</p>
+					</div>
+				</div>
+				<div class="serv">
+				<nav>
+					<li>
+						Professional assistance
+					</li>
+					<li>
+						Best places for your event
+					</li>
+					<li>
+						Event coordination	
+					</li>	
+					<li>
+						Banquets and Catering	
+					</li>
+					<li>
+						Services Bar & Cocktails	
+					</li>
+					<li>
+						Food Styling	
+					</li>
+
+					<li>
+						Music & Entertainment	
+					</li>
+					<li>
+						Recreational activities	
+						<li>Fishing</li>
+						<li>Outdoor activities</li>
+					</li>
+					
+				</nav>
+			</div>
+			</aside>
+
+			<footer class="footer">
+				<p>Copyright © 2020 Carlos Esquer</p>
+			</footer>
+		</div>
+		<script src="popup.js"></script>
+	</body>
+</html>
